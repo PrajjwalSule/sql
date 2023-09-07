@@ -1,10 +1,13 @@
 from mysql.connector import connect
+from password import Password
+
+Password = Password()
 
 
 connection = connect(
   host="localhost",
   user="root",
-  password='password', 
+  password=Password, 
 )
 
 cursor = connection.cursor()

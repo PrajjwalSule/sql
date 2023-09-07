@@ -1,9 +1,12 @@
 from mysql.connector import connect
+from password import Password
+
+Password = Password()
 
 database = connect(
     host="localhost",
     user="root",
-    password='password',
+    password=Password,
     database = 'DemoDB'
 )
 
